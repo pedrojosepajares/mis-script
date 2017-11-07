@@ -1,0 +1,51 @@
+#!/bin/bash
+echo "----------------------------------------------------"
+echo "UPDATE"
+echo "----------------------------------------------------"
+apt-get update
+
+echo "----------------------------------------------------"
+echo "UPGRADE"
+echo "----------------------------------------------------"
+apt-get upgrade
+
+echo "----------------------------------------------------"
+echo "INSTALACION DE GIT"
+echo "----------------------------------------------------"
+apt-get install -y git
+
+echo "----------------------------------------------------"
+echo "INSTALACION DE NODE JS"
+echo "----------------------------------------------------"
+apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_6.x | bash -
+apt-get install -y nodejs
+
+echo "----------------------------------------------------"
+echo "INSTALACION DE ANGULAR"
+echo "----------------------------------------------------"
+apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_6.x | bash -
+apt-get install -y nodejs
+
+echo "----------------------------------------------------"
+echo "INSTALACION DE ANGULAR2 Y ANGULAR CLI"
+echo "----------------------------------------------------"
+npm install -g @angular/cli@latest
+
+echo "----------------------------------------------------"
+echo "INSTALACION DE PYTHON Y PIP"
+echo "----------------------------------------------------"
+apt-get install -y python python-pip
+
+echo "----------------------------------------------------"
+echo "INSTALACION DE SQL ALCHEMY Y FLASK"
+echo "----------------------------------------------------"
+pip install SQLAlchemy Flask
+
+echo "----------------------------------------------------"
+echo "INSTALACION DE DOCKER"
+echo "----------------------------------------------------"
+apt-get install -y apt-transport-https ca-certificates
+apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo apt-get install -y docker.io
+
+

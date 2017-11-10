@@ -56,7 +56,7 @@ echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb
 apt-get update
 apt-get install -y mongodb-org
 #service mongod start
-#/var/log/mongodb/mongod.log
+#cat /var/log/mongodb/mongod.log
 #service mongod stop
 #service mongod restart
 

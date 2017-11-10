@@ -2,12 +2,12 @@
 echo "----------------------------------------------------"
 echo "UPDATE"
 echo "----------------------------------------------------"
-apt-get update
+apt-get update -y
 
 echo "----------------------------------------------------"
 echo "UPGRADE"
 echo "----------------------------------------------------"
-apt-get upgrade
+apt-get upgrade -y
 
 echo "----------------------------------------------------"
 echo "INSTALACION DE GIT"
@@ -47,5 +47,17 @@ echo "----------------------------------------------------"
 apt-get install -y apt-transport-https ca-certificates
 apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 sudo apt-get install -y docker.io
+
+echo "----------------------------------------------------"
+echo "INSTALACION DE MONGODB"
+echo "----------------------------------------------------"
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/testing multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+apt-get update
+apt-get install -y mongodb-org
+#service mongod start
+#/var/log/mongodb/mongod.log
+#service mongod stop
+#service mongod restart
 
 

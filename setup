@@ -21,6 +21,11 @@ apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_6.x | bash 
 apt-get install -y nodejs
 
 echo "----------------------------------------------------"
+echo "INSTALACION DE EXPRESS"
+echo "----------------------------------------------------"
+npm install -g express-generator
+
+echo "----------------------------------------------------"
 echo "INSTALACION DE ANGULAR"
 echo "----------------------------------------------------"
 apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_6.x | bash -
@@ -59,5 +64,14 @@ apt-get install -y mongodb-org
 #cat /var/log/mongodb/mongod.log
 #service mongod stop
 #service mongod restart
+
+echo "----------------------------------------------------"
+echo "INSTALACION DE VISUAL STUDIO CODE"
+echo "----------------------------------------------------"
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+apt-get update
+apt-get install code
 
 

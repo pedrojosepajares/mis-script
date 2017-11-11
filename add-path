@@ -3,3 +3,5 @@ echo "export PATH=${1}:$PATH" >> ~/.bashrc
 echo "${1} añadido al PATH. Es necesario reiniciar o ejecutar . ~/.bashrc en el terminal para que el cambio tenga efecto"
  
 
+
+
